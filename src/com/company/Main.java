@@ -56,7 +56,14 @@ public class Main {
 
     static void prtl(int[] arr){
         System.out.println("-------");
-        for(int i=0; i < arr.length-1; i++) {
+        for(int i=0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+
+    static void prtl(String[] arr){
+        System.out.println("-------");
+        for(int i=0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
     }
@@ -89,10 +96,22 @@ public class Main {
         bubbleSort(arr3);
         prtl(arr3);
 
+        //Строки
+        String s1="I have ";
+        String s2="apple";
+        String s= s1+s2;
+        int i=s.length();
+
+        String s4 = s.substring(2,s.length()-2); //"have app" обрезка
+        System.out.println(s4);
+
+        String isbn = "8-800-555-3555";
+        String[] isp=isbn.split(".");
+        prtl(isp);// 8 800 555 3555
+
 
         // массив символов
-        String s1="I have";
-        int i=s1.length();
-        // write your code here
+        char[] ch = s.toCharArray();
+
     }
 }
